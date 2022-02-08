@@ -14,16 +14,22 @@
 <body>
     <header>
         <div class="block">
-            <nav class="nav">
+            <nav class="level is-mobile">
+                <div class="level-item has-text-centered">
                 <div class="navbar-brand pl-5">
-                    <h1 class="title pt-6">COCKTAILS</h1>
+                    <h1 class="title pt-2">COCKTAILS</h1>
+                </div>
                 </div>
                 <div class="nav-right">
                     <a href="" class="navbar-end pr-5">
                         <h1 class="home">HOME</h1>
                     </a>
                     <a href="index.html" class="navbar-end pr-5">
-                        <h1 class="food">FOOD</h1>
+                        <i class="fas fa-utensils has-text-white pt-1 p-1"></i>
+                        <h1 class="recipes">RECIPES</h1>
+                    </a>
+                    <a href="favorites.html" class="navbar-end pr-5">
+                        <h1 class="favorites">FAVORITES</h1>
                     </a>
                 </div>
             </nav>
@@ -32,9 +38,9 @@
     <div class="container columns">
         <aside class="column mx-3 mt-3">
             <div id="form">
-                <div class="food-container">
+                <div class="box level-item has-text-centered">
                     <form action="">
-                        <div class="block" id="food_options">
+                        <div class="block" id="liquor_options"><h2>Liquors</h2>
                             <label class="radio mx-3  mt-5">
                                 <input type="radio" name="alcohol" id="tequila" value="tequila">
                                 Tequila
@@ -82,8 +88,15 @@
     <!--end of container-->
 
     <!-- Footer -->
-    <footer class="footer">
-        <h5></h5>
+       <footer class="level is-mobile pt-5 pb-5 mb-0">
+    <div class="footer-left pl-5">
+        <i class="fab fa-twitter has-text-white pl-3"></i>  
+        <i class="fab fa-instagram has-text-white pl-3"></i>
+        <i class="fab fa-youtube has-text-white pl-3"></i>
+    </div>   
+    <div class="level-item has-text-centered has-text-white">
+        <h4>©️2022 Dinner & Drinks</h4>
+    </div>
     </footer>
 
     <script src="assests/js/drinkIndex.js"></script>
