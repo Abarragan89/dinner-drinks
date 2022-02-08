@@ -45,8 +45,15 @@ h3 {
 }
 
 .footer {
-    background-color: rgb(14, 12, 12);
-    height:auto;
+  background-color: rgb(14, 12, 12);
+    color: black;
+    font-family: Didot, sans-serif;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding:0%;
+    margin-bottom: -20px;
 }
 
 .favorites:active, .favorites:focus {
@@ -89,4 +96,67 @@ h3 {
 }
 .nav {
   width: 100%;
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: -40px;
+}
+
+.centerDinnerDrinksButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.buttondinner {
+  background-color: rgb(14, 12, 12);
+  font-family: Didot, sans-serif;
+  font-weight: bold;
+  margin-left: 30px;
+  color: #fff
+
+}
+
+.buttondrinks {
+  background-color: rgb(14, 12, 12);
+  font-family: Didot, sans-serif;
+  font-weight: bold;
+  margin-left: 30px;
+  color: #fff
+
+}
+
+.page-title-header-home{
+  text-align: center;
+   font-size: 100px;
+   color: #fff;
+}
+
+.header-home {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+  padding: 20px 35px;
+  background-color: rgb(14, 12, 12);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.icon-text {
+  left: 0;
+  padding-left: 0;
 }

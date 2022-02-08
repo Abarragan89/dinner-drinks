@@ -4,27 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinner and Drinks</title>
+    <title>Dinner & Drinks</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="assests/styles/styles.css">
 
+      
+    <style>
+        html {
+            background-image: url('../dinner-drinks/assests/images/ddwhite950231-cool-black-background-designs-1920x1200-for-4k-monitor.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+          }
+             </style>
+        
 </head>
 
 <body>
-<header>
-    <h1 class="page-title" style="text-align: center; font-size: 100px;"> Dinner & Drinks </h1>
+<header class="header-home">
+
+    <span class="icon-text">
+        <span class="icon">
+          <i class="fas fa-home"></i>
+        </span>
+        <span></span>
+      </span>
+    
+    <!-- <h1 class="page-title-header-home is-1"> Dinner & Drinks </h1> -->
+    <div class="logo">
+        <h1 class="is-size-1 is-size-2-mobile is-size-1-desktop logo">D<span
+                class="is-size-3 is-size-4-mobile is-size-2-desktop ">inner</span> & D<span
+                class="is-size-3 is-size-4-mobile is-size-2-desktop">rinks</span></h1>
+    </div>
+   
+
 </header>
 <main>
 
-<div class ="centerDinnerDrinksButton" style="display: flex; justify-content: center; align-items: center; padding: 100px; ">
-    <button class="button mr-5" type="buttonDinner">Dinner</button>
-    <button class="button" type="buttonDrinks">Drinks</button>
+
+<div class ="centerDinnerDrinksButton">
+    <button class="buttondinner button mr-5 is-large is-fullwidth is-rounded" type="buttonDinner"><strong>🍽 Dinner 👨‍🍳</strong></button>
+    <button class="buttondrinks button is-large is-fullwidth is-rounded" type="buttonDrinks"><strong>🍸 Drinks 🍹</strong></button>
 </div>
 
+<div class ="centerDinnerDrinksButton">
+ <button class="button is-large is-fullwidth is-rounded" type="buttonFavorite"><strong>Favorite</strong></button>
+</div>
 </main>
     
 </body>
 
+<footer class="footer">
+    <div class="content has-text-centered">
+    <p class="subtitle is-6"> <code><strong>UCLA Extention Full-Stack Web Developer Project:</strong> Dinner & Drinks: by 
+        Anthony Barragan, Sophie Homer, and Nikita Sharpio </code>
+     </p>
+     </div>
+
+     <p class="buttons" >
+        <button class="button is-large">
+          <span class="icon is-large">
+            <em class="fab fa-github"></em>
+          </span>
+          <span>GitHub: <a href="https://github.com/Abarragan89/dinner-drinks/"> Dinner and Drinks</a></span>
+        </button>
+        </p>
+</footer>
 
 </html>
