@@ -1,13 +1,13 @@
 "use strict";
-const searchDrinkBtn = document.querySelector("#search_drink");
-const recipeDrinkListEl = document.querySelector("#recipe_drink");
-const resultsEl = document.querySelector("#results")
+const searchDrinkBtn = document.querySelector("#search_drinks");
+// const recipeDrinkListEl = document.querySelector("#recipe_drink");
+const resultsEl = document.querySelector("#results");
 
 // Main function
 async function getRecipeCocktails (event) {
     event.preventDefault();
     removeAllChildNodes(resultsEl)
-    const alcohol = getAlcohol();
+    const alcohol = document.querySelector('input[type="radio"]:checked').value;
     const urlByName = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${alcohol}`;
     const response  = await fetch(urlByName);
     const data = await response.json();
@@ -44,19 +44,6 @@ async function getInstructions (id) {
     return instructions;
 }
 
-// Return the alcohol options from user
-const getAlcohol = function () {
-    const alcoholOptions = [];
-    const choices = document.getElementsByClassName("alcohol");
-    for (let i = 0; i < choices.length; i++) {
-        if (choices[i].checked === true) {
-            alcoholOptions.push(choices[i].value)
-        }
-    }
-    const optionsStr = alcoholOptions.join(",");
-    return optionsStr;
-}
-
 // Save to Local Storage
 const saveLocalStorage = function (event) {
     //  Get name of drink
@@ -79,7 +66,7 @@ async function makeCard(data, attachingEl) {
     for (let i = 0; i < data.drinks.length; i++) {
         // create Message
         const messageEl = document.createElement("article");
-        messageEl.className = "message";
+        messageEl.classList.add("message", "result-cards");
         // create message header element and attach to message element
         const messageHeaderEl = document.createElement("div");
         messageHeaderEl.classList.add("message-header", "has-background-black");
@@ -144,7 +131,7 @@ async function makeCard(data, attachingEl) {
         const paragraphEl = document.createElement("p");
         paragraphEl.classList.add("card-footer-item");
         const buttonEl = document.createElement("button");
-        buttonEl.classList.add("button", "is-small");
+        buttonEl.classList.add("button", "is-small", "favorites");
         buttonEl.textContent = "Add to Favorites ";
 
         buttonEl.addEventListener("click", saveLocalStorage)
@@ -171,3 +158,30 @@ function removeAllChildNodes(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
+
+// Nav-burger menu
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+
+            });
+        });
+    }
+
+});
