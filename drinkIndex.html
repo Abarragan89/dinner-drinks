@@ -14,6 +14,23 @@
 <body>
     <!-- Navigation -->
     <header>
+        <div class="block">
+            <nav class="level is-mobile">
+                <div class="level-item has-text-centered">
+                <div class="navbar-brand pl-5">
+                    <h1 class="title pt-2">COCKTAILS</h1>
+                </div>
+                </div>
+                <div class="nav-right">
+                    <a href="" class="navbar-end pr-5">
+                        <h1 class="home">HOME</h1>
+                    </a>
+                    <a href="index.html" class="navbar-end pr-5">
+                        <i class="fas fa-utensils has-text-white pt-1 p-1"></i>
+                        <h1 class="recipes">RECIPES</h1>
+                    </a>
+                    <a href="favorites.html" class="navbar-end pr-5">
+                        <h1 class="favorites">FAVORITES</h1>
         <nav class="navbar has-background-black" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
@@ -40,11 +57,43 @@
                     </a>
                     <a class="navbar-item" href="favorites.html">
                         Favorites
+
                     </a>
                 </div>
             </div>
         </nav>
     </header>
+    <div class="container columns">
+        <aside class="column mx-3 mt-3">
+            <div id="form">
+                <div class="box level-item has-text-centered">
+                    <form action="">
+                        <div class="block" id="liquor_options"><h2>Liquors</h2>
+                            <label class="radio mx-3  mt-5">
+                                <input type="radio" name="alcohol" id="tequila" value="tequila">
+                                Tequila
+                            </label>
+                            <label class="radio mx-3 pt-3">
+                                <input type="radio" name="alcohol" id="whiskey" value="whiskey">
+                                Whiskey
+                            </label>
+                            <label class="radio mx-3 pt-3">
+                                <input type="radio" name="alcohol" id="gin" value="gin">
+                                Gin
+                            </label>
+                            <div class="block">
+                                <label class="radio mx-3 pt-3">
+                                    <input type="radio" name="alcohol" id="scotch" value="scotch">
+                                    Scotch
+                                </label>
+                                <label class="radio mx-3 pt-3">
+                                    <input type="radio" name="alcohol" id="vodka" value="vodka">
+                                    Vodka
+                                </label>
+                                <label class="radio mx-3 pt-3 mb-4">
+                                    <input type="radio" name="alcohol" id="rum" value="rum">
+                                    Rum
+                                </label>
     <!-- Main -->
     <main class="container">
         <h2 class="title has-text-centered has-text-black page-title">COCKTAILS</h2>
@@ -84,6 +133,7 @@
                                         </label>
                                     </div>
                                 </div>
+
                             </div>
                             <button type="submit" class="button is-medium mt-4 has-background-black" id="search_drinks">
                                 <h3>LET'S DRINK!</h3>
@@ -105,6 +155,16 @@
     </main>
     <!--end of container-->
     <!-- Footer -->
+
+       <footer class="level is-mobile pt-5 pb-5 mb-0">
+    <div class="footer-left pl-5">
+        <i class="fab fa-twitter has-text-white pl-3"></i>  
+        <i class="fab fa-instagram has-text-white pl-3"></i>
+        <i class="fab fa-youtube has-text-white pl-3"></i>
+    </div>   
+    <div class="level-item has-text-centered has-text-white">
+        <h4>©️2022 Dinner & Drinks</h4>
+    </div>
     <footer class="footer">
     </footer>
     <script src="assests/js/drinkIndex.js"></script>
